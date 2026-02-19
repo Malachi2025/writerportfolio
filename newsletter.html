@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Stories & Poems by Peter Hace | Spark. Write. Inspire.</title>
-  <meta name="description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
+  <title>Newsletter | Spark. Write. Inspire.</title>
+  <meta name="description" content="Letters from the Writing Desk — occasional dispatches from Peter Hace on writing, reading, and craft. Join 4,000 readers.">
   <meta name="keywords" content="Peter Hace, Spark Write Inspire, literary fiction, author, short stories, poetry, writing submissions">
   <meta name="author" content="Peter Hace">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sparkwriteinspire.studio/stories.html">
+  <link rel="canonical" href="https://sparkwriteinspire.studio/newsletter.html">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Stories & Poems by Peter Hace | Spark. Write. Inspire.">
-  <meta property="og:description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
-  <meta property="og:url" content="https://sparkwriteinspire.studio/stories.html">
+  <meta property="og:title" content="Newsletter | Spark. Write. Inspire.">
+  <meta property="og:description" content="Letters from the Writing Desk — occasional dispatches from Peter Hace on writing, reading, and craft. Join 4,000 readers.">
+  <meta property="og:url" content="https://sparkwriteinspire.studio/newsletter.html">
   <meta property="og:site_name" content="Spark. Write. Inspire.">
   <meta property="og:image" content="https://sparkwriteinspire.studio/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Stories & Poems by Peter Hace | Spark. Write. Inspire.">
-  <meta name="twitter:description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
+  <meta name="twitter:title" content="Newsletter | Spark. Write. Inspire.">
+  <meta name="twitter:description" content="Letters from the Writing Desk — occasional dispatches from Peter Hace on writing, reading, and craft. Join 4,000 readers.">
   <meta name="twitter:creator" content="@peterhace">
   <meta name="theme-color" content="#0e1520">
 
@@ -138,53 +138,27 @@
   }
 
 
-  /* Tab switcher */
-  .tab-bar { display:flex; gap:0; border-bottom:1px solid var(--parchment-deeper); margin-bottom:4rem; }
-  .tab-btn { padding:1rem 2.5rem; font-family:'Libre Baskerville',serif; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; background:none; border:none; color:var(--sepia-light); cursor:pointer; position:relative; transition:color 0.3s; }
-  .tab-btn::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; }
-  .tab-btn.active { color:var(--ink); }
-  .tab-btn.active::after { transform:scaleX(1); }
-  .tab-btn:hover { color:var(--ink); }
-  .tab-panel { display:none; }
-  .tab-panel.active { display:block; }
-
-  /* Section intro */
-  .section-intro { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.25rem; font-weight:300; line-height:1.7; color:var(--ink-light); max-width:600px; margin-bottom:3.5rem; }
-
-  /* Stories list */
-  .work-list { border-top:1px solid var(--parchment-deeper); }
-  .work-entry { display:grid; grid-template-columns:4.5rem 1fr auto; gap:2.5rem; padding:2.5rem 0; border-bottom:1px solid var(--parchment-deeper); align-items:start; transition:background 0.2s,padding 0.2s; }
-  .work-entry:hover { background:rgba(240,244,249,0.7); padding-left:1.5rem; padding-right:1.5rem; margin:0 -1.5rem; }
-  .work-num { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--gold-light); opacity:0.4; line-height:1; text-align:right; }
-  .work-meta { font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); margin-bottom:0.5rem; }
-  .work-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.55rem; color:var(--ink); margin-bottom:0.6rem; line-height:1.2; }
-  .work-excerpt { font-size:0.88rem; line-height:1.8; color:var(--ink-light); max-width:580px; }
-  .work-link { display:inline-block; margin-top:1rem; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); transition:color 0.2s; white-space:nowrap; }
-  .work-link:hover { color:var(--gold); }
-  .work-badge { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid var(--parchment-deeper); color:var(--sepia-light); white-space:nowrap; height:fit-content; margin-top:0.3rem; }
-  .work-badge.new { border-color:rgba(181,107,126,0.4); color:var(--gold); }
-
-  /* Poems — slightly different layout */
-  .poem-entry { padding:3rem 0; border-bottom:1px solid var(--parchment-deeper); }
-  .poem-entry:first-child { padding-top:0; }
-  .poem-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem; }
-  .poem-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:2rem; font-weight:300; color:var(--ink); line-height:1.1; }
-  .poem-meta { font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); margin-top:0.5rem; }
-  .poem-badge { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid var(--parchment-deeper); color:var(--sepia-light); white-space:nowrap; flex-shrink:0; margin-top:0.3rem; }
-  .poem-badge.new { border-color:rgba(181,107,126,0.4); color:var(--gold); }
-  .poem-preview { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.15rem; line-height:1.9; color:var(--ink-light); padding-left:2rem; border-left:2px solid var(--gold-light); margin-bottom:1.2rem; max-width:520px; }
-  .poem-note { font-size:0.82rem; line-height:1.75; color:var(--ink-light); margin-bottom:1rem; }
-  .poem-link { display:inline-block; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); transition:color 0.2s; }
-  .poem-link:hover { color:var(--gold); }
-
-  @media(max-width:900px){
-    .work-entry{grid-template-columns:3rem 1fr;}
-    .work-badge{display:none;}
-    .work-entry:hover{margin:0;padding-left:0;padding-right:0;}
-    .work-num{font-size:2rem;}
-    .tab-btn{padding:0.8rem 1.2rem;font-size:0.65rem;}
-    .poem-header{flex-direction:column;gap:0.5rem;}
-  }
+  .nl-hero { max-width:680px; margin:0 auto 4rem; text-align:center; }
+  .nl-hero h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:300; color:var(--ink); margin-bottom:1.5rem; line-height:1.1; }
+  .nl-hero h2 em { font-style:italic; color:var(--sepia); }
+  .nl-hero p { font-size:0.95rem; line-height:1.9; color:var(--ink-light); margin-bottom:1.2rem; }
+  .nl-signup { max-width:480px; margin:0 auto 5rem; }
+  .nl-signup-form { display:flex; border:1px solid var(--parchment-deeper); overflow:hidden; margin-bottom:1rem; }
+  .nl-signup-form input { flex:1; padding:1rem 1.5rem; font-family:'Libre Baskerville',serif; font-size:0.9rem; background:var(--cream); border:none; outline:none; color:var(--ink); }
+  .nl-signup-form input::placeholder { color:var(--sepia-light); opacity:0.6; }
+  .nl-signup-form button { padding:1rem 2rem; background:var(--ink); color:var(--cream); font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; border:none; cursor:pointer; transition:background 0.3s; white-space:nowrap; }
+  .nl-signup-form button:hover { background:var(--sepia); }
+  .nl-note { font-size:0.72rem; color:var(--sepia-light); text-align:center; letter-spacing:0.1em; }
+  .nl-archive { border-top:1px solid var(--parchment-deeper); }
+  .nl-archive-title { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; color:var(--ink); margin-bottom:2.5rem; }
+  .nl-archive-title em { font-style:italic; color:var(--sepia); }
+  .nl-issue { display:flex; justify-content:space-between; align-items:start; padding:2rem 0; border-bottom:1px solid var(--parchment-deeper); gap:2rem; }
+  .nl-issue-date { font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); min-width:7rem; padding-top:0.3rem; }
+  .nl-issue-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.4rem; color:var(--ink); margin-bottom:0.5rem; }
+  .nl-issue-desc { font-size:0.85rem; line-height:1.75; color:var(--ink-light); }
+  .nl-issue-link { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); white-space:nowrap; flex-shrink:0; margin-top:0.3rem; }
+  .nl-issue-link:hover { color:var(--gold); }
+  @media(max-width:700px){ .nl-issue{flex-direction:column;gap:1rem;} }
 
 </style>
 </head>
@@ -222,133 +196,50 @@
 <div class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-content">
-    <p class="page-hero-sub">Peter Hace &mdash; Collected Works</p>
-    <h1>Stories <em>&amp; Poems</em></h1>
+    <p class="page-hero-sub">Stay Connected</p>
+    <h1>The <em>Newsletter</em></h1>
   </div>
 </div>
 <div class="page-content">
-
-  <div class="tab-bar" role="tablist" aria-label="Work type">
-    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-stories" onclick="switchTab(this,'panel-stories')">Short Stories</button>
-    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-poems" onclick="switchTab(this,'panel-poems')">Poetry</button>
+  <div class="nl-hero fade-in">
+    <h2>Letters from<br><em>the Writing Desk</em></h2>
+    <p>Occasional dispatches from Peter Hace on writing, reading, craft, and the quiet work of paying attention. Sent when something feels worth saying &mdash; never on a schedule, never as noise.</p>
+    <p>Join over 4,000 readers who receive it.</p>
   </div>
-
-  <!-- STORIES PANEL -->
-  <div id="panel-stories" class="tab-panel active" role="tabpanel">
-    <p class="section-intro fade-in">&ldquo;A short story is a different creature from a novel &mdash; not a smaller one. It is a held breath, not a journey. What you leave out is the whole architecture.&rdquo;</p>
-    <div class="work-list" role="list">
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">01</div>
-        <div><p class="work-meta">The New Yorker &middot; February 2024</p><h2 class="work-title">The Cartographer&rsquo;s Daughter</h2><p class="work-excerpt">A woman inherits her father's maps and begins to suspect they chart something other than geography. A story about inheritance, erasure, and the territories we make of other people.</p><a href="#" class="work-link" rel="noopener">Read at The New Yorker</a></div>
-        <span class="work-badge new">New</span>
-      </article>
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">02</div>
-        <div><p class="work-meta">Granta &middot; Issue 164 &middot; 2023</p><h2 class="work-title">Everything That Remains</h2><p class="work-excerpt">Two old men meet each summer at the same bench. A story about time, and what it takes from us without asking &mdash; and what, surprisingly, it sometimes gives back.</p><a href="#" class="work-link" rel="noopener">Read at Granta</a></div>
-        <span class="work-badge">2023</span>
-      </article>
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">03</div>
-        <div><p class="work-meta">The Paris Review &middot; Issue 242 &middot; 2022</p><h2 class="work-title">Milk and Honey and Ash</h2><p class="work-excerpt">A beekeeper&rsquo;s wife discovers her husband has been keeping a second set of hives &mdash; and a second life &mdash; in the woods behind their property. Winner of the Paris Review Prize in Fiction.</p><a href="#" class="work-link" rel="noopener">Read at The Paris Review</a></div>
-        <span class="work-badge">2022</span>
-      </article>
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">04</div>
-        <div><p class="work-meta">Tin House &middot; Vol. 23 No. 1 &middot; 2021</p><h2 class="work-title">The Language of Doors</h2><p class="work-excerpt">On the last night before demolition, the residents of a condemned apartment block each leave something behind. What remains tells us everything about who they were.</p><a href="#" class="work-link" rel="noopener">Read at Tin House</a></div>
-        <span class="work-badge">2021</span>
-      </article>
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">05</div>
-        <div><p class="work-meta">Ploughshares &middot; Spring 2020</p><h2 class="work-title">How We Learned to Disappear</h2><p class="work-excerpt">A mother teaches her daughter how to be invisible, never quite explaining why she learned the skill herself. A story about protection, secrecy, and the lessons we pass on without meaning to.</p><a href="#" class="work-link" rel="noopener">Read at Ploughshares</a></div>
-        <span class="work-badge">2020</span>
-      </article>
-      <article class="work-entry fade-in" role="listitem">
-        <div class="work-num">06</div>
-        <div><p class="work-meta">Zoetrope &middot; Vol. 23 &middot; 2019</p><h2 class="work-title">The Third Season</h2><p class="work-excerpt">In a country where autumn lasts nine months, a calendar-maker falls in love with a woman who only believes in spring. A fable about hope and the stubborn insistence of beauty.</p><a href="#" class="work-link" rel="noopener">Read at Zoetrope</a></div>
-        <span class="work-badge">2019</span>
-      </article>
+  <div class="nl-signup fade-in">
+    <form class="nl-signup-form" onsubmit="handleNL(event)">
+      <input type="email" placeholder="Your email address" required aria-label="Email address">
+      <button type="submit" id="nlBtn">Subscribe Free</button>
+    </form>
+    <p class="nl-note">No spam. Unsubscribe any time. Your address is never shared.</p>
+  </div>
+  <div class="nl-archive fade-in">
+    <h3 class="nl-archive-title">Recent <em>Issues</em></h3>
+    <div class="nl-issue">
+      <span class="nl-issue-date">Jan 2024</span>
+      <div><p class="nl-issue-title">On Starting Again</p><p class="nl-issue-desc">A letter about beginning new work after a long silence, and what the blank page demands of us when we return to it.</p></div>
+      <a href="#" class="nl-issue-link">Read Issue</a>
+    </div>
+    <div class="nl-issue">
+      <span class="nl-issue-date">Nov 2023</span>
+      <div><p class="nl-issue-title">The Books That Changed Me</p><p class="nl-issue-desc">Eight books I return to year after year, and what each one continues to teach me about the possibilities of the form.</p></div>
+      <a href="#" class="nl-issue-link">Read Issue</a>
+    </div>
+    <div class="nl-issue">
+      <span class="nl-issue-date">Sep 2023</span>
+      <div><p class="nl-issue-title">In Defence of Slowness</p><p class="nl-issue-desc">Why writing fast is sometimes the enemy of writing well, and how I learned to trust the story that arrives on its own schedule.</p></div>
+      <a href="#" class="nl-issue-link">Read Issue</a>
+    </div>
+    <div class="nl-issue">
+      <span class="nl-issue-date">Jun 2023</span>
+      <div><p class="nl-issue-title">What Rejection Taught Me</p><p class="nl-issue-desc">Thirty-seven rejections before my first publication. What those letters contained that I couldn't see at the time.</p></div>
+      <a href="#" class="nl-issue-link">Read Issue</a>
     </div>
   </div>
-
-  <!-- POEMS PANEL -->
-  <div id="panel-poems" class="tab-panel" role="tabpanel" id="poems">
-    <p class="section-intro fade-in">&ldquo;Poetry is the art of saying what cannot be said any other way &mdash; and meaning every word of the silence around it.&rdquo;</p>
-    <div class="work-list">
-      <div class="poem-entry fade-in">
-        <div class="poem-header">
-          <div><h2 class="poem-title">What the Light Leaves Behind</h2><p class="poem-meta">Poetry Magazine &middot; March 2024</p></div>
-          <span class="poem-badge new">New</span>
-        </div>
-        <div class="poem-preview">
-          There are mornings that do not end &mdash;<br>
-          they fold themselves into the curtains,<br>
-          into the particular weight of a cup<br>
-          that someone else once held.
-        </div>
-        <p class="poem-note">A meditation on the residue of memory and the way certain mornings refuse to leave us entirely.</p>
-        <a href="#" class="poem-link" rel="noopener">Read at Poetry Magazine</a>
-      </div>
-      <div class="poem-entry fade-in">
-        <div class="poem-header">
-          <div><h2 class="poem-title">The Names We Give to Water</h2><p class="poem-meta">The American Poetry Review &middot; Fall 2023</p></div>
-          <span class="poem-badge">2023</span>
-        </div>
-        <div class="poem-preview">
-          My father called the river by a woman&rsquo;s name.<br>
-          I never asked whose.<br>
-          Some doors are hinged from the inside.
-        </div>
-        <p class="poem-note">First published in the American Poetry Review&rsquo;s landmark issue on landscape and inheritance.</p>
-        <a href="#" class="poem-link" rel="noopener">Read at APR</a>
-      </div>
-      <div class="poem-entry fade-in">
-        <div class="poem-header">
-          <div><h2 class="poem-title">Cartography of a Small Life</h2><p class="poem-meta">The New Yorker &middot; Summer 2022</p></div>
-          <span class="poem-badge">2022</span>
-        </div>
-        <div class="poem-preview">
-          Here: the kitchen table where she never sat.<br>
-          Here: the garden she planned but didn&rsquo;t plant.<br>
-          Here: the silence that learned, over time, to answer.
-        </div>
-        <p class="poem-note">Included in <em>Best American Poetry 2023</em>, selected by Terrance Hayes.</p>
-        <a href="#" class="poem-link" rel="noopener">Read at The New Yorker</a>
-      </div>
-      <div class="poem-entry fade-in">
-        <div class="poem-header">
-          <div><h2 class="poem-title">After the Diagnosis</h2><p class="poem-meta">Kenyon Review &middot; Winter 2021</p></div>
-          <span class="poem-badge">2021</span>
-        </div>
-        <div class="poem-preview">
-          We did not speak of it directly &mdash;<br>
-          we spoke of the weather,<br>
-          of a film we&rsquo;d both forgotten,<br>
-          of everything that still had a name.
-        </div>
-        <p class="poem-note">Winner of the Kenyon Review Prize in Poetry.</p>
-        <a href="#" class="poem-link" rel="noopener">Read at Kenyon Review</a>
-      </div>
-    </div>
-  </div>
-
 </div>
 </main>
 <script>
-  function switchTab(btn, panelId) {
-    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    btn.setAttribute('aria-selected','true');
-    document.getElementById(panelId).classList.add('active');
-    // Re-trigger fade-ins for newly visible panel
-    document.querySelectorAll('#'+panelId+' .fade-in').forEach(el => {
-      if(!el.classList.contains('visible')) { setTimeout(()=>el.classList.add('visible'),80); }
-    });
-  }
-  // Check URL hash to open poems tab directly
-  if(window.location.hash === '#poems') {
-    switchTab(document.querySelectorAll('.tab-btn')[1], 'panel-poems');
-  }
+  function handleNL(e){e.preventDefault();const b=document.getElementById('nlBtn');b.textContent='Subscribed — Thank You';b.style.background='var(--sepia)';b.disabled=true;}
 </script>
 
 
