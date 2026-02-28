@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Stories & Poems by Peter Hace | Spark. Write. Inspire.</title>
+  <meta name="description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
+  <meta name="keywords" content="Peter Hace, Spark Write Inspire, literary fiction, author, short stories, poetry, writing submissions">
+  <meta name="author" content="Peter Hace">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sparkwriteinspire.studio/stories.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stories & Poems by Peter Hace | Spark. Write. Inspire.">
+  <meta property="og:description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
+  <meta property="og:url" content="https://sparkwriteinspire.studio/stories.html">
+  <meta property="og:site_name" content="Spark. Write. Inspire.">
+  <meta property="og:image" content="https://sparkwriteinspire.studio/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stories & Poems by Peter Hace | Spark. Write. Inspire.">
+  <meta name="twitter:description" content="Short fiction and poetry by Peter Hace — published in The New Yorker, Granta, The Paris Review, Poetry Magazine, and more.">
+  <meta name="twitter:creator" content="@peterhace">
+  <meta name="theme-color" content="#0e1520">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+
+  :root {
+    --parchment: #e8edf4;
+    --parchment-dark: #d4dce9;
+    --parchment-deeper: #b8c6d6;
+    --ink: #1b2535;
+    --ink-light: #2e3f56;
+    --sepia: #4a6b8a;
+    --sepia-light: #7a9ab8;
+    --gold: #b56b7e;
+    --gold-light: #cc8f9e;
+    --cream: #f0f4f9;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--parchment); color:var(--ink); font-family:'Libre Baskerville',serif; overflow-x:hidden; }
+  body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events:none; z-index:999; opacity:0.6; }
+
+  
+  
+  
+  /* NAV */
+  nav {
+    position:fixed; top:0; left:0; right:0; z-index:200;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0 4rem;
+    height:68px;
+    background:#ffffff;
+    border-bottom:2px solid var(--parchment-deeper);
+    box-shadow:0 2px 20px rgba(27,37,53,0.08);
+  }
+  .nav-brand { display:flex; flex-direction:column; gap:0.1rem; text-decoration:none; flex-shrink:0; }
+  .nav-brand-name { font-family:'IM Fell English',serif; font-size:1.2rem; letter-spacing:0.04em; color:#1b2535; line-height:1; }
+  .nav-brand-tag { font-size:0.5rem; letter-spacing:0.32em; text-transform:uppercase; color:#4a6b8a; }
+  .nav-links { display:flex; align-items:center; gap:2.5rem; list-style:none; }
+  .nav-links a {
+    font-family:'Libre Baskerville',serif;
+    font-size:0.68rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:#1b2535;
+    text-decoration:none;
+    transition:color 0.2s;
+    white-space:nowrap;
+    position:relative;
+    padding-bottom:3px;
+    font-weight:400;
+  }
+  .nav-links a::after {
+    content:'';
+    position:absolute;
+    bottom:0; left:0; right:0;
+    height:1.5px;
+    background:#b56b7e;
+    transform:scaleX(0);
+    transition:transform 0.25s;
+  }
+  .nav-links a:hover { color:#4a6b8a; }
+  .nav-links a:hover::after { transform:scaleX(1); }
+  .nav-links a.active { color:#4a6b8a; }
+  .nav-links a.active::after { transform:scaleX(1); }
+  .nav-links li:last-child a {
+    padding:0.45rem 1.2rem;
+    border:1.5px solid #1b2535;
+    color:#1b2535;
+    font-weight:700;
+  }
+  .nav-links li:last-child a::after { display:none; }
+  .nav-links li:last-child a:hover { background:#1b2535; color:#ffffff; }
+  @media(max-width:1050px){ nav{padding:0 2rem;} .nav-links{gap:1.5rem;} .nav-links a{font-size:0.62rem;} .nav-brand-tag{display:none;} }
+  @media(max-width:750px){ nav{padding:0 1.2rem;} .nav-links{gap:0.9rem;} .nav-links a{font-size:0.55rem;letter-spacing:0.08em;} .nav-links li:last-child a{padding:0.35rem 0.7rem;} }
+
+  /* PAGE HERO */
+  .page-hero { min-height:38vh; display:flex; align-items:flex-end; padding:8rem 4rem 4rem; position:relative; overflow:hidden; }
+  .page-hero-bg { position:absolute; inset:0; background:radial-gradient(ellipse at 20% 80%,rgba(74,107,138,0.12) 0%,transparent 60%); pointer-events:none; }
+  .page-hero h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(3rem,8vw,7rem); font-weight:300; line-height:1; color:var(--ink); position:relative; z-index:1; }
+  .page-hero h1 em { font-style:italic; color:var(--sepia); }
+  .page-hero-sub { font-size:0.72rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--sepia-light); margin-bottom:1.2rem; position:relative; z-index:1; }
+  .page-hero-content { display:flex; flex-direction:column; }
+
+  /* SHARED */
+  .section-eyebrow { font-size:0.68rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--sepia-light); margin-bottom:1rem; }
+  .section-title { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.5rem); font-weight:300; color:var(--ink); line-height:1.1; }
+  .section-title em { font-style:italic; color:var(--sepia); }
+  .section-divider { display:flex; align-items:center; gap:0.8rem; margin-top:1.2rem; }
+  .section-divider span { display:block; height:1px; width:50px; background:var(--gold-light); }
+  .section-divider .dot { width:5px; height:5px; border-radius:50%; background:var(--gold-light); }
+  .page-content { max-width:1200px; margin:0 auto; padding:5rem 4rem 7rem; }
+
+  /* FOOTER */
+  footer { background:#0e1520; padding:3rem 4rem; }
+  .footer-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2.5rem; padding-bottom:2.5rem; border-bottom:1px solid rgba(232,237,244,0.08); }
+  .footer-brand-name { font-family:'IM Fell English',serif; font-size:1.4rem; color:rgba(232,237,244,0.5); line-height:1; margin-bottom:0.4rem; }
+  .footer-brand-tag { font-size:0.52rem; letter-spacing:0.35em; text-transform:uppercase; color:rgba(232,237,244,0.2); }
+  .footer-brand-desc { font-size:0.78rem; line-height:1.7; color:rgba(232,237,244,0.25); max-width:260px; margin-top:0.8rem; }
+  .footer-nav { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 3rem; }
+  .footer-nav a { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(232,237,244,0.3); text-decoration:none; transition:color 0.3s; }
+  .footer-nav a:hover { color:var(--gold-light); }
+  .footer-social { display:flex; flex-direction:column; gap:0.5rem; }
+  .footer-social a { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(232,237,244,0.3); text-decoration:none; transition:color 0.3s; text-align:right; }
+  .footer-social a:hover { color:var(--gold-light); }
+  .footer-bottom { display:flex; justify-content:space-between; align-items:center; }
+  .footer-copy { font-size:0.65rem; letter-spacing:0.12em; color:rgba(232,237,244,0.2); }
+  .footer-legal { display:flex; gap:2rem; }
+  .footer-legal a { font-size:0.65rem; letter-spacing:0.12em; color:rgba(232,237,244,0.2); text-decoration:none; transition:color 0.3s; }
+  .footer-legal a:hover { color:rgba(232,237,244,0.4); }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  .fade-in { opacity:0; transform:translateY(25px); transition:opacity 0.8s ease,transform 0.8s ease; }
+  .fade-in.visible { opacity:1; transform:translateY(0); }
+
+  @media(max-width:900px) {
+    nav { padding:1rem 1.5rem; }
+    .page-content { padding:3rem 1.5rem 5rem; }
+    .page-hero { padding:7rem 1.5rem 3rem; }
+    .footer-top { flex-direction:column; gap:2.5rem; }
+    .footer-social a { text-align:left; }
+    .footer-bottom { flex-direction:column; gap:1rem; text-align:center; }
+    footer { padding:2.5rem 1.5rem; }
+  }
+
+
+  
+  .novel-entry { display:grid; grid-template-columns:220px 1fr; gap:3.5rem; padding:4rem 0; border-bottom:1px solid var(--parchment-deeper); align-items:start; }
+  .novel-entry:first-child { padding-top:0; }
+  .novel-entry:last-child { border-bottom:none; }
+  .novel-cover { width:100%; aspect-ratio:2/3; position:relative; overflow:hidden; box-shadow:0 12px 40px rgba(27,37,53,0.18); transition:transform 0.4s,box-shadow 0.4s; }
+  .novel-cover:hover { transform:translateY(-5px) rotate(-0.8deg); box-shadow:0 22px 60px rgba(27,37,53,0.25); }
+  .novel-cover-bg { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; padding:2rem; text-align:center; }
+  .novel-cover-bg::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.28)); }
+  .nc1 { background:linear-gradient(135deg,#1b2535 0%,#2d4460 40%,#3d6080 100%); }
+  .nc2 { background:linear-gradient(135deg,#2a1f30 0%,#4a3560 50%,#7a5580 100%); }
+  .nc3 { background:linear-gradient(135deg,#141e2a 0%,#1e3048 50%,#2a4a68 100%); }
+  .cover-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.4rem; font-weight:300; color:rgba(240,244,249,0.9); line-height:1.2; position:relative; z-index:1; }
+  .cover-orn { width:30px; height:1px; background:rgba(204,143,158,0.6); margin:0.7rem auto; position:relative; z-index:1; }
+  .cover-author { font-size:0.56rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(240,244,249,0.5); position:relative; z-index:1; }
+  .novel-meta { display:flex; gap:1.8rem; margin-bottom:1.2rem; flex-wrap:wrap; }
+  .novel-meta-item { display:flex; flex-direction:column; gap:0.2rem; }
+  .nml { font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--sepia-light); }
+  .nmv { font-family:'Cormorant Garamond',serif; font-size:0.95rem; color:var(--ink); }
+  .novel-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.2rem; }
+  .novel-tag { font-size:0.58rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.22rem 0.7rem; border:1px solid var(--parchment-deeper); color:var(--sepia-light); }
+  .novel-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:2.2rem; font-weight:300; color:var(--ink); line-height:1.1; margin-bottom:1.2rem; }
+  .novel-desc { font-size:0.9rem; line-height:1.9; color:var(--ink-light); margin-bottom:1rem; }
+  .novel-praise { margin-top:1.5rem; padding:1.3rem 1.8rem; background:var(--cream); border-left:2px solid var(--gold-light); }
+  .novel-praise blockquote { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem; color:var(--ink-light); line-height:1.6; margin-bottom:0.4rem; }
+  .novel-praise cite { font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--sepia-light); }
+  .novel-actions { display:flex; gap:1rem; margin-top:1.8rem; flex-wrap:wrap; }
+  .novel-buy { display:inline-block; padding:0.75rem 1.8rem; border:1px solid var(--gold); font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sepia); text-decoration:none; transition:all 0.3s; }
+  .novel-buy:hover { background:var(--gold); color:var(--cream); }
+  .novel-buy.secondary { border-color:var(--parchment-deeper); color:var(--ink-light); }
+  .novel-buy.secondary:hover { background:var(--parchment-deeper); color:var(--ink); }
+  @media(max-width:900px){
+    .novel-entry { grid-template-columns:1fr; gap:2rem; }
+    .novel-cover { max-width:180px; }
+  }
+
+  /* Tab switcher */
+  .tab-bar { display:flex; gap:0; border-bottom:1px solid var(--parchment-deeper); margin-bottom:4rem; }
+  .tab-btn { padding:1rem 2.5rem; font-family:'Libre Baskerville',serif; font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; background:none; border:none; color:var(--sepia-light); cursor:pointer; position:relative; transition:color 0.3s; }
+  .tab-btn::after { content:''; position:absolute; bottom:-1px; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform 0.3s; }
+  .tab-btn.active { color:var(--ink); }
+  .tab-btn.active::after { transform:scaleX(1); }
+  .tab-btn:hover { color:var(--ink); }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+
+  /* Section intro */
+  .section-intro { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.25rem; font-weight:300; line-height:1.7; color:var(--ink-light); max-width:600px; margin-bottom:3.5rem; }
+
+  /* Stories list */
+  .work-list { border-top:1px solid var(--parchment-deeper); }
+  .work-entry { display:grid; grid-template-columns:4.5rem 1fr auto; gap:2.5rem; padding:2.5rem 0; border-bottom:1px solid var(--parchment-deeper); align-items:start; transition:background 0.2s,padding 0.2s; }
+  .work-entry:hover { background:rgba(240,244,249,0.7); padding-left:1.5rem; padding-right:1.5rem; margin:0 -1.5rem; }
+  .work-num { font-family:'Cormorant Garamond',serif; font-size:2.8rem; font-weight:300; color:var(--gold-light); opacity:0.4; line-height:1; text-align:right; }
+  .work-meta { font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); margin-bottom:0.5rem; }
+  .work-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.55rem; color:var(--ink); margin-bottom:0.6rem; line-height:1.2; }
+  .work-excerpt { font-size:0.88rem; line-height:1.8; color:var(--ink-light); max-width:580px; }
+  .work-link { display:inline-block; margin-top:1rem; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); transition:color 0.2s; white-space:nowrap; }
+  .work-link:hover { color:var(--gold); }
+  .work-badge { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid var(--parchment-deeper); color:var(--sepia-light); white-space:nowrap; height:fit-content; margin-top:0.3rem; }
+  .work-badge.new { border-color:rgba(181,107,126,0.4); color:var(--gold); }
+
+  /* Novel entries inside tab */
+  
+
+  /* Poems — slightly different layout */
+  .poem-entry { padding:3rem 0; border-bottom:1px solid var(--parchment-deeper); }
+  .poem-entry:first-child { padding-top:0; }
+  .poem-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem; }
+  .poem-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:2rem; font-weight:300; color:var(--ink); line-height:1.1; }
+  .poem-meta { font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); margin-top:0.5rem; }
+  .poem-badge { font-size:0.6rem; letter-spacing:0.18em; text-transform:uppercase; padding:0.3rem 0.8rem; border:1px solid var(--parchment-deeper); color:var(--sepia-light); white-space:nowrap; flex-shrink:0; margin-top:0.3rem; }
+  .poem-badge.new { border-color:rgba(181,107,126,0.4); color:var(--gold); }
+  .poem-preview { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.15rem; line-height:1.9; color:var(--ink-light); padding-left:2rem; border-left:2px solid var(--gold-light); margin-bottom:1.2rem; max-width:520px; }
+  .poem-note { font-size:0.82rem; line-height:1.75; color:var(--ink-light); margin-bottom:1rem; }
+  .poem-link { display:inline-block; font-size:0.65rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); transition:color 0.2s; }
+  .poem-link:hover { color:var(--gold); }
+
+  @media(max-width:900px){
+    .work-entry{grid-template-columns:3rem 1fr;}
+    .work-badge{display:none;}
+    .work-entry:hover{margin:0;padding-left:0;padding-right:0;}
+    .work-num{font-size:2rem;}
+    .tab-btn{padding:0.8rem 1.2rem;font-size:0.65rem;}
+    .poem-header{flex-direction:column;gap:0.5rem;}
+  }
+
+</style>
+</head>
+<body>
+
+
+
+<nav>
+  <a href="index.html" class="nav-brand" aria-label="Spark. Write. Inspire. — Home">
+    <span class="nav-brand-name">Peter Hace</span>
+    <span class="nav-brand-tag">Spark. Write. Inspire.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="stories.html">Stories &amp; Poems</a></li>
+    <li><a href="submit.html">Submit Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+    <li><a href="press.html">Press Kit</a></li>
+  </ul>
+</nav>
+
+
+  <div class="overlay-footer">
+    <a href="#" aria-label="Instagram">Instagram</a>
+    <a href="#" aria-label="Goodreads">Goodreads</a>
+    <a href="#" aria-label="Twitter">Twitter / X</a>
+  </div>
+</div>
+
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <p class="page-hero-sub">Peter Hace &mdash; Collected Works</p>
+    <h1>Stories <em>&amp; Poems</em></h1>
+  </div>
+</div>
+<div class="page-content">
+
+  <div class="tab-bar" role="tablist" aria-label="Work type">
+    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-novels" onclick="switchTab(this,'panel-novels')">Novels</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-stories" onclick="switchTab(this,'panel-stories')">Short Stories</button>
+    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-poems" onclick="switchTab(this,'panel-poems')">Poetry</button>
+  </div>
+
+  <!-- NOVELS PANEL -->
+  <div id="panel-novels" class="tab-panel active" role="tabpanel">
+    <p class="section-intro fade-in">&ldquo;A novel is a long piece of work that asks something of both the writer and the reader &mdash; patience, trust, and the willingness to be changed by the end of it.&rdquo;</p>
+    <div class="work-list">
+
+      <div class="novel-entry fade-in">
+        <div class="novel-cover nc1" role="img" aria-label="Book cover: The Weight of Still Water">
+          <div class="novel-cover-bg">
+            <div class="cover-orn"></div>
+            <p class="cover-title">The Weight of Still Water</p>
+            <div class="cover-orn"></div>
+            <p class="cover-author">Peter Hace</p>
+          </div>
+        </div>
+        <div class="novel-info">
+          <div class="novel-meta">
+            <div class="novel-meta-item"><span class="nml">Published</span><span class="nmv">2023</span></div>
+            <div class="novel-meta-item"><span class="nml">Publisher</span><span class="nmv">Farrar, Straus &amp; Giroux</span></div>
+            <div class="novel-meta-item"><span class="nml">Pages</span><span class="nmv">342</span></div>
+          </div>
+          <div class="novel-tags"><span class="novel-tag">Literary Fiction</span><span class="novel-tag">Family</span><span class="novel-tag">Memory</span></div>
+          <h2 class="novel-title">The Weight of Still Water</h2>
+          <p class="novel-desc">A daughter returns to her childhood home after her mother&rsquo;s death and discovers a cache of letters that rewrite everything she believed about her family &mdash; and herself. Set over a single Vermont autumn, the novel braids three women&rsquo;s lives across four decades of silence and sacrifice.</p>
+          <p class="novel-desc">Longlisted for the Women&rsquo;s Prize for Fiction. New York Times Notable Book of the Year.</p>
+          <div class="novel-praise"><blockquote>&ldquo;A stunning, sorrowful work. Hace has written a novel about the stories families keep &mdash; and the cost of finally telling them.&rdquo;</blockquote><cite>&mdash; New York Times Book Review</cite></div>
+          <div class="novel-actions">
+            <a href="#" class="novel-buy">Find This Book</a>
+            <a href="#" class="novel-buy secondary">Read an Excerpt</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="novel-entry fade-in">
+        <div class="novel-cover nc2" role="img" aria-label="Book cover: All the Borrowed Light">
+          <div class="novel-cover-bg">
+            <div class="cover-orn"></div>
+            <p class="cover-title">All the Borrowed Light</p>
+            <div class="cover-orn"></div>
+            <p class="cover-author">Peter Hace</p>
+          </div>
+        </div>
+        <div class="novel-info">
+          <div class="novel-meta">
+            <div class="novel-meta-item"><span class="nml">Published</span><span class="nmv">2020</span></div>
+            <div class="novel-meta-item"><span class="nml">Publisher</span><span class="nmv">Knopf</span></div>
+            <div class="novel-meta-item"><span class="nml">Pages</span><span class="nmv">418</span></div>
+          </div>
+          <div class="novel-tags"><span class="novel-tag">Literary Fiction</span><span class="novel-tag">Generational</span><span class="novel-tag">Grief</span></div>
+          <h2 class="novel-title">All the Borrowed Light</h2>
+          <p class="novel-desc">Set across three generations of a Cape Breton fishing family, this sweeping novel maps the cost of silence between men who love deeply and speak in riddles. Beginning in 1942, it follows three men named after the same grandfather, each inheriting his silences and his unspoken grief.</p>
+          <p class="novel-desc">Finalist for the Dublin Literary Award. Sunday Times bestseller.</p>
+          <div class="novel-praise"><blockquote>&ldquo;Hace is doing something rare &mdash; building a mythology out of ordinary people, ordinary loss, ordinary love.&rdquo;</blockquote><cite>&mdash; The Observer</cite></div>
+          <div class="novel-actions">
+            <a href="#" class="novel-buy">Find This Book</a>
+            <a href="#" class="novel-buy secondary">Read an Excerpt</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="novel-entry fade-in">
+        <div class="novel-cover nc3" role="img" aria-label="Book cover: A Kind of Leaving">
+          <div class="novel-cover-bg">
+            <div class="cover-orn"></div>
+            <p class="cover-title">A Kind of Leaving</p>
+            <div class="cover-orn"></div>
+            <p class="cover-author">Peter Hace</p>
+          </div>
+        </div>
+        <div class="novel-info">
+          <div class="novel-meta">
+            <div class="novel-meta-item"><span class="nml">Published</span><span class="nmv">2018</span></div>
+            <div class="novel-meta-item"><span class="nml">Publisher</span><span class="nmv">Picador</span></div>
+            <div class="novel-meta-item"><span class="nml">Pages</span><span class="nmv">288</span></div>
+          </div>
+          <div class="novel-tags"><span class="novel-tag">Literary Fiction</span><span class="novel-tag">Debut</span><span class="novel-tag">Scotland</span></div>
+          <h2 class="novel-title">A Kind of Leaving</h2>
+          <p class="novel-desc">A young woman vanishes from a remote Scottish village. What follows is not a mystery &mdash; it is an accounting of what it means to disappear by degrees, long before you are gone.</p>
+          <p class="novel-desc">Longlisted for the Booker Prize. Winner of the Betty Trask Award for best debut Commonwealth novel.</p>
+          <div class="novel-praise"><blockquote>&ldquo;A remarkable debut. Spare, devastating, and utterly precise. Hace arrived as a fully formed writer.&rdquo;</blockquote><cite>&mdash; Times Literary Supplement</cite></div>
+          <div class="novel-actions">
+            <a href="#" class="novel-buy">Find This Book</a>
+            <a href="#" class="novel-buy secondary">Read an Excerpt</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STORIES PANEL -->
+  <div id="panel-stories" class="tab-panel" role="tabpanel">
+    <p class="section-intro fade-in">&ldquo;A short story is a different creature from a novel &mdash; not a smaller one. It is a held breath, not a journey. What you leave out is the whole architecture.&rdquo;</p>
+    <div class="work-list" role="list">
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">01</div>
+        <div><p class="work-meta">The New Yorker &middot; February 2024</p><h2 class="work-title">The Cartographer&rsquo;s Daughter</h2><p class="work-excerpt">A woman inherits her father's maps and begins to suspect they chart something other than geography. A story about inheritance, erasure, and the territories we make of other people.</p><a href="#" class="work-link" rel="noopener">Read at The New Yorker</a></div>
+        <span class="work-badge new">New</span>
+      </article>
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">02</div>
+        <div><p class="work-meta">Granta &middot; Issue 164 &middot; 2023</p><h2 class="work-title">Everything That Remains</h2><p class="work-excerpt">Two old men meet each summer at the same bench. A story about time, and what it takes from us without asking &mdash; and what, surprisingly, it sometimes gives back.</p><a href="#" class="work-link" rel="noopener">Read at Granta</a></div>
+        <span class="work-badge">2023</span>
+      </article>
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">03</div>
+        <div><p class="work-meta">The Paris Review &middot; Issue 242 &middot; 2022</p><h2 class="work-title">Milk and Honey and Ash</h2><p class="work-excerpt">A beekeeper&rsquo;s wife discovers her husband has been keeping a second set of hives &mdash; and a second life &mdash; in the woods behind their property. Winner of the Paris Review Prize in Fiction.</p><a href="#" class="work-link" rel="noopener">Read at The Paris Review</a></div>
+        <span class="work-badge">2022</span>
+      </article>
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">04</div>
+        <div><p class="work-meta">Tin House &middot; Vol. 23 No. 1 &middot; 2021</p><h2 class="work-title">The Language of Doors</h2><p class="work-excerpt">On the last night before demolition, the residents of a condemned apartment block each leave something behind. What remains tells us everything about who they were.</p><a href="#" class="work-link" rel="noopener">Read at Tin House</a></div>
+        <span class="work-badge">2021</span>
+      </article>
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">05</div>
+        <div><p class="work-meta">Ploughshares &middot; Spring 2020</p><h2 class="work-title">How We Learned to Disappear</h2><p class="work-excerpt">A mother teaches her daughter how to be invisible, never quite explaining why she learned the skill herself. A story about protection, secrecy, and the lessons we pass on without meaning to.</p><a href="#" class="work-link" rel="noopener">Read at Ploughshares</a></div>
+        <span class="work-badge">2020</span>
+      </article>
+      <article class="work-entry fade-in" role="listitem">
+        <div class="work-num">06</div>
+        <div><p class="work-meta">Zoetrope &middot; Vol. 23 &middot; 2019</p><h2 class="work-title">The Third Season</h2><p class="work-excerpt">In a country where autumn lasts nine months, a calendar-maker falls in love with a woman who only believes in spring. A fable about hope and the stubborn insistence of beauty.</p><a href="#" class="work-link" rel="noopener">Read at Zoetrope</a></div>
+        <span class="work-badge">2019</span>
+      </article>
+    </div>
+  </div>
+
+  <!-- POEMS PANEL -->
+  <div id="panel-poems" class="tab-panel" role="tabpanel" id="poems">
+    <p class="section-intro fade-in">&ldquo;Poetry is the art of saying what cannot be said any other way &mdash; and meaning every word of the silence around it.&rdquo;</p>
+    <div class="work-list">
+      <div class="poem-entry fade-in">
+        <div class="poem-header">
+          <div><h2 class="poem-title">What the Light Leaves Behind</h2><p class="poem-meta">Poetry Magazine &middot; March 2024</p></div>
+          <span class="poem-badge new">New</span>
+        </div>
+        <div class="poem-preview">
+          There are mornings that do not end &mdash;<br>
+          they fold themselves into the curtains,<br>
+          into the particular weight of a cup<br>
+          that someone else once held.
+        </div>
+        <p class="poem-note">A meditation on the residue of memory and the way certain mornings refuse to leave us entirely.</p>
+        <a href="#" class="poem-link" rel="noopener">Read at Poetry Magazine</a>
+      </div>
+      <div class="poem-entry fade-in">
+        <div class="poem-header">
+          <div><h2 class="poem-title">The Names We Give to Water</h2><p class="poem-meta">The American Poetry Review &middot; Fall 2023</p></div>
+          <span class="poem-badge">2023</span>
+        </div>
+        <div class="poem-preview">
+          My father called the river by a woman&rsquo;s name.<br>
+          I never asked whose.<br>
+          Some doors are hinged from the inside.
+        </div>
+        <p class="poem-note">First published in the American Poetry Review&rsquo;s landmark issue on landscape and inheritance.</p>
+        <a href="#" class="poem-link" rel="noopener">Read at APR</a>
+      </div>
+      <div class="poem-entry fade-in">
+        <div class="poem-header">
+          <div><h2 class="poem-title">Cartography of a Small Life</h2><p class="poem-meta">The New Yorker &middot; Summer 2022</p></div>
+          <span class="poem-badge">2022</span>
+        </div>
+        <div class="poem-preview">
+          Here: the kitchen table where she never sat.<br>
+          Here: the garden she planned but didn&rsquo;t plant.<br>
+          Here: the silence that learned, over time, to answer.
+        </div>
+        <p class="poem-note">Included in <em>Best American Poetry 2023</em>, selected by Terrance Hayes.</p>
+        <a href="#" class="poem-link" rel="noopener">Read at The New Yorker</a>
+      </div>
+      <div class="poem-entry fade-in">
+        <div class="poem-header">
+          <div><h2 class="poem-title">After the Diagnosis</h2><p class="poem-meta">Kenyon Review &middot; Winter 2021</p></div>
+          <span class="poem-badge">2021</span>
+        </div>
+        <div class="poem-preview">
+          We did not speak of it directly &mdash;<br>
+          we spoke of the weather,<br>
+          of a film we&rsquo;d both forgotten,<br>
+          of everything that still had a name.
+        </div>
+        <p class="poem-note">Winner of the Kenyon Review Prize in Poetry.</p>
+        <a href="#" class="poem-link" rel="noopener">Read at Kenyon Review</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</main>
+<script>
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+    document.getElementById(panelId).classList.add('active');
+    // Re-trigger fade-ins for newly visible panel
+    document.querySelectorAll('#'+panelId+' .fade-in').forEach(el => {
+      if(!el.classList.contains('visible')) { setTimeout(()=>el.classList.add('visible'),80); }
+    });
+  }
+  // Check URL hash to open correct tab directly
+  if(window.location.hash === '#poems') {
+    switchTab(document.querySelectorAll('.tab-btn')[2], 'panel-poems');
+  } else if(window.location.hash === '#stories') {
+    switchTab(document.querySelectorAll('.tab-btn')[1], 'panel-stories');
+  }
+</script>
+
+
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Peter Hace</div>
+      <div class="footer-brand-tag">Spark. Write. Inspire.</div>
+      <p class="footer-brand-desc">A home for literary fiction, original voices, and the writers who dare to tell the truth slant.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="submit.html">Submit Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="stories.html">Stories &amp; Poems</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a href="press.html">Press Kit</a>
+      <a href="sitemap.xml">Sitemap</a>
+    </nav>
+    <div class="footer-social">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="Goodreads">Goodreads</a>
+      <a href="#" aria-label="Twitter / X">Twitter / X</a>
+      <a href="#" aria-label="LinkedIn">LinkedIn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2024 Peter Hace &mdash; Spark. Write. Inspire. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script>
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if(a.getAttribute('href') === path) a.classList.add('active');
+  });
+</script>
+
+
+
+</body>
+</html>
