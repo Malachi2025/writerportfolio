@@ -44,34 +44,68 @@
   body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events:none; z-index:999; opacity:0.6; }
 
   
-  /* NAV — horizontal, dark, links right-aligned */
+  
+  /* NAV — light bar, dark text, Coda-style */
   nav {
     position:fixed; top:0; left:0; right:0; z-index:200;
     display:flex; justify-content:space-between; align-items:center;
     padding:0 4rem;
-    height:62px;
-    background:#0e1520;
-    border-bottom:1px solid rgba(232,237,244,0.08);
+    height:68px;
+    background:#e8edf4;
+    border-bottom:1px solid var(--parchment-deeper);
   }
   .nav-brand { display:flex; flex-direction:column; gap:0.1rem; text-decoration:none; flex-shrink:0; }
-  .nav-brand-name { font-family:'IM Fell English',serif; font-size:1.15rem; letter-spacing:0.04em; color:#e8edf4; line-height:1; }
-  .nav-brand-tag { font-size:0.5rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--sepia-light); }
-  .nav-links { display:flex; align-items:center; gap:2.2rem; list-style:none; }
-  .nav-links a { font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(232,237,244,0.55); text-decoration:none; transition:color 0.25s; white-space:nowrap; position:relative; padding-bottom:2px; }
-  .nav-links a::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.25s; }
-  .nav-links a:hover { color:#e8edf4; }
+  .nav-brand-name { font-family:'IM Fell English',serif; font-size:1.2rem; letter-spacing:0.04em; color:var(--ink); line-height:1; }
+  .nav-brand-tag { font-size:0.5rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--sepia); }
+  .nav-links { display:flex; align-items:center; gap:2.5rem; list-style:none; }
+  .nav-links a {
+    font-family:'Libre Baskerville',serif;
+    font-size:0.68rem;
+    letter-spacing:0.15em;
+    text-transform:uppercase;
+    color:var(--ink);
+    text-decoration:none;
+    transition:color 0.2s;
+    white-space:nowrap;
+    position:relative;
+    padding-bottom:3px;
+  }
+  .nav-links a::after {
+    content:'';
+    position:absolute;
+    bottom:0; left:0; right:0;
+    height:1.5px;
+    background:var(--gold);
+    transform:scaleX(0);
+    transition:transform 0.25s;
+  }
+  .nav-links a:hover { color:var(--sepia); }
   .nav-links a:hover::after { transform:scaleX(1); }
-  .nav-links a.active { color:#e8edf4; }
+  .nav-links a.active { color:var(--sepia); }
   .nav-links a.active::after { transform:scaleX(1); }
-  @media(max-width:900px){
-    nav { padding:0 1.5rem; }
-    .nav-links { gap:1.2rem; }
-    .nav-links a { font-size:0.58rem; letter-spacing:0.1em; }
+  /* CTA-style highlight on last link (Press Kit) */
+  .nav-links li:last-child a {
+    padding:0.45rem 1.1rem;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    letter-spacing:0.15em;
+  }
+  .nav-links li:last-child a::after { display:none; }
+  .nav-links li:last-child a:hover {
+    background:var(--ink);
+    color:var(--parchment);
+  }
+  @media(max-width:1050px){
+    nav { padding:0 2rem; }
+    .nav-links { gap:1.5rem; }
+    .nav-links a { font-size:0.62rem; }
     .nav-brand-tag { display:none; }
   }
-  @media(max-width:600px){
-    .nav-links { gap:0.8rem; }
-    .nav-links a { font-size:0.52rem; }
+  @media(max-width:750px){
+    nav { padding:0 1.2rem; }
+    .nav-links { gap:1rem; }
+    .nav-links a { font-size:0.56rem; letter-spacing:0.08em; }
+    .nav-links li:last-child a { padding:0.35rem 0.7rem; }
   }
 
 
@@ -153,6 +187,7 @@
 <body>
 
 
+
 <nav>
   <a href="index.html" class="nav-brand" aria-label="Spark. Write. Inspire. — Home">
     <span class="nav-brand-name">Peter Hace</span>
@@ -167,6 +202,7 @@
     <li><a href="press.html">Press Kit</a></li>
   </ul>
 </nav>
+
 
   <div class="overlay-footer">
     <a href="#" aria-label="Instagram">Instagram</a>
@@ -264,13 +300,14 @@
 
 
 
+
 <script>
-  // Highlight active nav link
   const path = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a').forEach(a => {
     if(a.getAttribute('href') === path) a.classList.add('active');
   });
 </script>
+
 
 
 </body>
