@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit Your Work | Spark. Write. Inspire.</title>
+  <meta name="description" content="Submit your short stories, poetry, essays, or novel excerpts. Free. Every submission read. Response within six weeks.">
+  <meta name="author" content="Peter Hace">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sparkwriteinspire.studio/submit.html">
+  <meta property="og:title" content="Submit Your Work | Spark. Write. Inspire.">
+  <meta property="og:description" content="Submit your short stories, poetry, essays, or novel excerpts. Free. Every submission read. Response within six weeks.">
+  <meta property="og:url" content="https://sparkwriteinspire.studio/submit.html">
+  <meta property="og:site_name" content="Spark. Write. Inspire.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@peterhace">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+<style>
+  body { background:var(--ink); color:var(--parchment); }
+  /* Nav override — stays white on dark page */
+  #nav-placeholder #site-nav,
+  #site-nav { background:var(--white) !important; border-bottom-color:var(--parchment-deep) !important; }
+  #site-nav .nav-brand-name { color:var(--ink) !important; }
+  #site-nav .nav-brand-tag  { color:var(--sepia) !important; }
+  #site-nav .nav-links a    { color:var(--ink) !important; }
+  #site-nav .nav-links a.nav-cta { border-color:var(--ink) !important; color:var(--ink) !important; }
+  #site-nav .nav-links a.nav-cta:hover { background:var(--ink) !important; color:var(--white) !important; }
+
+  .page-hero h1 { color:var(--cream); }
+  .page-hero h1 em { color:var(--gold-light); }
+  .page-hero-sub { color:var(--sepia-light); }
+  .sub-intro { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.2rem; line-height:1.8; color:rgba(232,237,244,0.62); max-width:640px; margin-bottom:3.5rem; }
+  .genre-tags { display:flex; flex-wrap:wrap; gap:0.7rem; margin-bottom:3.5rem; }
+  .genre-tag { padding:0.42rem 1.1rem; border:1px solid rgba(232,237,244,0.14); font-size:0.63rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(232,237,244,0.38); cursor:pointer; transition:all 0.3s; background:transparent; font-family:'Libre Baskerville',serif; }
+  .genre-tag.active,.genre-tag:hover { border-color:var(--gold); color:var(--gold-light); }
+  .sub-layout { display:grid; grid-template-columns:1fr 300px; gap:5rem; align-items:start; }
+  .sub-form { display:flex; flex-direction:column; gap:1.3rem; }
+  .sub-row { display:grid; grid-template-columns:1fr 1fr; gap:1.3rem; }
+  .sub-field { display:flex; flex-direction:column; gap:0.4rem; }
+  .sub-field label { font-size:0.6rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--sepia-light); }
+  .sub-field input,.sub-field select,.sub-field textarea { background:rgba(232,237,244,0.05); border:1px solid rgba(232,237,244,0.1); padding:0.9rem 1.1rem; font-family:'Libre Baskerville',serif; font-size:0.85rem; color:var(--parchment); outline:none; transition:border-color 0.3s; resize:none; -webkit-appearance:none; }
+  .sub-field select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a9ab8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 1rem center; background-color:rgba(232,237,244,0.05); cursor:pointer; }
+  .sub-field select option { background:var(--ink); }
+  .sub-field input::placeholder,.sub-field textarea::placeholder { color:rgba(232,237,244,0.2); }
+  .sub-field input:focus,.sub-field select:focus,.sub-field textarea:focus { border-color:var(--gold); }
+  .sub-or { display:flex; align-items:center; gap:1.2rem; font-size:0.63rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(232,237,244,0.2); }
+  .sub-or span { flex:1; height:1px; background:rgba(232,237,244,0.07); }
+  .file-area { border:1px dashed rgba(232,237,244,0.14); padding:2.5rem 2rem; text-align:center; cursor:pointer; transition:all 0.3s; position:relative; }
+  .file-area:hover { border-color:var(--gold); }
+  .file-area input { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
+  .file-text { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.05rem; color:rgba(232,237,244,0.38); margin-bottom:0.4rem; }
+  .file-sub { font-size:0.63rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(232,237,244,0.18); }
+  .sub-consent { display:flex; align-items:flex-start; gap:1rem; }
+  .sub-consent input[type=checkbox] { flex-shrink:0; width:15px; height:15px; margin-top:3px; accent-color:var(--gold); }
+  .sub-consent label { font-size:0.78rem; line-height:1.7; color:rgba(232,237,244,0.38); }
+  .sub-submit { padding:1.05rem 2.8rem; background:transparent; border:1px solid var(--gold); color:var(--gold-light); font-family:'Libre Baskerville',serif; font-size:0.7rem; letter-spacing:0.22em; text-transform:uppercase; cursor:pointer; transition:all 0.3s; align-self:flex-start; }
+  .sub-submit:hover { background:var(--gold); color:var(--ink); }
+  .sidebar { position:sticky; top:calc(var(--nav-height) + 2rem); display:flex; flex-direction:column; gap:1.8rem; }
+  .sb { padding:1.6rem; border:1px solid rgba(232,237,244,0.07); }
+  .sb-title { font-size:0.6rem; letter-spacing:0.24em; text-transform:uppercase; color:var(--sepia-light); margin-bottom:1.1rem; }
+  .sb ul { list-style:none; display:flex; flex-direction:column; gap:0.45rem; }
+  .sb li { font-size:0.8rem; line-height:1.7; color:rgba(232,237,244,0.42); padding-left:1.1rem; position:relative; }
+  .sb li::before { content:'—'; position:absolute; left:0; color:rgba(204,143,158,0.32); }
+  .sb-stat { display:flex; flex-direction:column; padding:0.9rem 0; border-bottom:1px solid rgba(232,237,244,0.05); }
+  .sb-stat:last-child { border-bottom:none; }
+  .sb-num { font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--parchment); line-height:1; }
+  .sb-lbl { font-size:0.62rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--sepia-light); }
+  footer { background:#07090e; border-top:1px solid rgba(232,237,244,0.05); }
+  @media(max-width:1000px){ .sub-layout{grid-template-columns:1fr;} .sidebar{position:static;} .sub-row{grid-template-columns:1fr;} }
+</style>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-sub">Open Submissions</p>
+      <h1>Submit <em>Your Work</em></h1>
+    </div>
+  </div>
+  <div class="page-content">
+    <p class="sub-intro fade-in">This is a space for writers at every stage. We read every submission with care and respond to all within six weeks. We are particularly drawn to work that takes risks &mdash; with form, with silence, with the unsayable.</p>
+    <div class="genre-tags fade-in">
+      <button class="genre-tag active" onclick="selectGenre(this,'')">All Genres</button>
+      <button class="genre-tag" onclick="selectGenre(this,'Short Story')">Short Stories</button>
+      <button class="genre-tag" onclick="selectGenre(this,'Poetry')">Poetry</button>
+      <button class="genre-tag" onclick="selectGenre(this,'Essay')">Essays</button>
+      <button class="genre-tag" onclick="selectGenre(this,'Novel Excerpt')">Novel Excerpts</button>
+    </div>
+    <div class="sub-layout">
+      <form class="sub-form fade-in" onsubmit="handleSub(event)" novalidate>
+        <div class="sub-row">
+          <div class="sub-field"><label for="fn">First Name</label><input id="fn" type="text" placeholder="First name" required></div>
+          <div class="sub-field"><label for="ln">Last Name</label><input id="ln" type="text" placeholder="Last name" required></div>
+        </div>
+        <div class="sub-row">
+          <div class="sub-field"><label for="se">Email</label><input id="se" type="email" placeholder="your@email.com" required></div>
+          <div class="sub-field"><label for="gs">Genre</label>
+            <select id="gs" required>
+              <option value="" disabled selected>Select genre&hellip;</option>
+              <option>Short Story / Prose</option>
+              <option>Poetry</option>
+              <option>Essay</option>
+              <option>Novel Excerpt</option>
+            </select>
+          </div>
+        </div>
+        <div class="sub-field"><label for="wt">Title of Work</label><input id="wt" type="text" placeholder="Untitled is fine"></div>
+        <div class="sub-field"><label for="ab">Author Bio <em style="opacity:.35">(optional)</em></label><textarea id="ab" rows="3" placeholder="A sentence or two about yourself."></textarea></div>
+        <div class="sub-field"><label for="wk">Paste Your Work</label><textarea id="wk" rows="12" placeholder="Up to 5,000 words for prose, three poems, or 4,000 words for essays."></textarea></div>
+        <div class="sub-or"><span></span>or attach a file<span></span></div>
+        <div class="sub-field">
+          <div class="file-area"><input type="file" accept=".doc,.docx,.pdf,.txt,.rtf"><p class="file-text">Drop your file here or click to browse</p><p class="file-sub">.doc &middot; .docx &middot; .pdf &middot; .txt &middot; .rtf &mdash; max 10MB</p></div>
+        </div>
+        <div class="sub-consent"><input type="checkbox" id="consent" required><label for="consent">I confirm this is my original work and I hold all rights to it.</label></div>
+        <button type="submit" class="sub-submit" id="subBtn">Submit Your Work</button>
+      </form>
+      <aside class="sidebar fade-in">
+        <div class="sb"><p class="sb-title">Guidelines</p><ul><li>Short stories: up to 5,000 words</li><li>Poetry: up to three pieces</li><li>Essays: up to 4,000 words</li><li>Novel excerpts: up to 5,000 words</li><li>Simultaneous submissions OK</li><li>No previously published work</li><li>All work read anonymously</li><li>Response within six weeks</li></ul></div>
+        <div class="sb"><p class="sb-title">By the Numbers</p><div class="sb-stat"><span class="sb-num">6 wks</span><span class="sb-lbl">Response time</span></div><div class="sb-stat"><span class="sb-num">100%</span><span class="sb-lbl">Submissions read</span></div><div class="sb-stat"><span class="sb-num">Free</span><span class="sb-lbl">No submission fee</span></div></div>
+        <div class="sb"><p class="sb-title">What We Love</p><ul><li>Work that takes formal risks</li><li>Unexpected perspectives</li><li>Ordinary people, extraordinary interiors</li><li>Writing that knows when to be quiet</li></ul></div>
+      </aside>
+    </div>
+  </div>
+</main>
+<script>
+  function selectGenre(btn, val) {
+    document.querySelectorAll('.genre-tag').forEach(function(t){ t.classList.remove('active'); });
+    btn.classList.add('active');
+    if (val) { var s = document.getElementById('gs'); for(var i=0;i<s.options.length;i++){ if(s.options[i].text.indexOf(val)>-1){ s.selectedIndex=i; break; } } }
+  }
+  function handleSub(e) { e.preventDefault(); var b=document.getElementById('subBtn'); b.textContent='Received — Thank You'; b.disabled=true; }
+</script>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Peter Hace</div>
+        <div class="footer-brand-tag">Spark. Write. Inspire.</div>
+        <p class="footer-brand-desc">A home for literary fiction, original voices, and the writers who dare to tell the truth slant.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="stories.html">Stories &amp; Poems</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="press.html">Press Kit</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Goodreads">Goodreads</a>
+        <a href="#" aria-label="Twitter / X">Twitter / X</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Peter Hace &mdash; Spark. Write. Inspire.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(function(r) {
+        if (!r.ok) throw new Error('nav fetch failed: ' + r.status);
+        return r.text();
+      })
+      .then(function(html) {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('#site-nav .nav-links a').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.classList.add('active');
+        });
+      })
+      .catch(function(err) { console.warn('Could not load nav.html:', err); });
+
+    // Fade-in observer
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          setTimeout(function(){ e.target.classList.add('visible'); }, 60);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    });
+  </script>
+
+</body>
+</html>

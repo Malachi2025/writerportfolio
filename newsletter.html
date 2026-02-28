@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter | Spark. Write. Inspire.</title>
+  <meta name="description" content="Letters from the Writing Desk — occasional dispatches from Peter Hace on writing, reading, and craft.">
+  <meta name="author" content="Peter Hace">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sparkwriteinspire.studio/newsletter.html">
+  <meta property="og:title" content="Newsletter | Spark. Write. Inspire.">
+  <meta property="og:description" content="Letters from the Writing Desk — occasional dispatches from Peter Hace on writing, reading, and craft.">
+  <meta property="og:url" content="https://sparkwriteinspire.studio/newsletter.html">
+  <meta property="og:site_name" content="Spark. Write. Inspire.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@peterhace">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+<style>
+  .nl-hero { max-width:660px; margin:0 auto 4rem; text-align:center; }
+  .nl-hero h2 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,5vw,3.4rem); font-weight:300; color:var(--ink); margin-bottom:1.4rem; }
+  .nl-hero h2 em { font-style:italic; color:var(--sepia); }
+  .nl-hero p { font-size:0.92rem; line-height:1.9; color:var(--ink-light); margin-bottom:1.1rem; }
+  .nl-signup { max-width:460px; margin:0 auto 5rem; }
+  .nl-signup form { display:flex; border:1px solid var(--parchment-deep); overflow:hidden; margin-bottom:0.9rem; }
+  .nl-signup input { flex:1; padding:1rem 1.5rem; font-family:'Libre Baskerville',serif; font-size:0.88rem; background:var(--cream); border:none; outline:none; color:var(--ink); }
+  .nl-signup input::placeholder { color:var(--sepia-light); opacity:0.6; }
+  .nl-signup button { padding:1rem 1.8rem; background:var(--ink); color:var(--cream); font-family:'Libre Baskerville',serif; font-size:0.67rem; letter-spacing:0.18em; text-transform:uppercase; border:none; cursor:pointer; transition:background 0.3s; white-space:nowrap; }
+  .nl-signup button:hover { background:var(--sepia); }
+  .nl-note { font-size:0.7rem; color:var(--sepia-light); text-align:center; }
+  .nl-archive { border-top:1px solid var(--parchment-deep); }
+  .nl-archive-title { font-family:'Cormorant Garamond',serif; font-size:1.75rem; font-weight:300; color:var(--ink); margin-bottom:2.5rem; }
+  .nl-archive-title em { font-style:italic; color:var(--sepia); }
+  .nl-issue { display:flex; justify-content:space-between; align-items:flex-start; padding:1.8rem 0; border-bottom:1px solid var(--parchment-deep); gap:2rem; }
+  .nl-date { font-size:0.63rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--sepia-light); min-width:6rem; padding-top:0.3rem; }
+  .nl-title { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.35rem; color:var(--ink); margin-bottom:0.4rem; }
+  .nl-desc { font-size:0.84rem; line-height:1.75; color:var(--ink-light); }
+  .nl-read { font-size:0.63rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--sepia-light); text-decoration:none; border-bottom:1px solid var(--gold-light); white-space:nowrap; flex-shrink:0; margin-top:0.2rem; }
+  .nl-read:hover { color:var(--gold); }
+  @media(max-width:700px){ .nl-issue{flex-direction:column;gap:0.9rem;} }
+</style>
+
+<main>
+  <div class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-content">
+      <p class="page-hero-sub">Stay Connected</p>
+      <h1>The <em>Newsletter</em></h1>
+    </div>
+  </div>
+  <div class="page-content">
+    <div class="nl-hero fade-in">
+      <h2>Letters from <em>the Writing Desk</em></h2>
+      <p>Occasional dispatches from Peter Hace on writing, reading, craft, and the quiet work of paying attention. Sent when something feels worth saying &mdash; never on a schedule, never as noise.</p>
+      <p>Join over 4,000 readers who receive it.</p>
+    </div>
+    <div class="nl-signup fade-in">
+      <form onsubmit="handleNL(event)">
+        <input type="email" placeholder="Your email address" required aria-label="Email address">
+        <button type="submit" id="nlBtn">Subscribe Free</button>
+      </form>
+      <p class="nl-note">No spam. Unsubscribe any time.</p>
+    </div>
+    <div class="nl-archive fade-in">
+      <h3 class="nl-archive-title">Recent <em>Issues</em></h3>
+      <div class="nl-issue"><span class="nl-date">Jan 2024</span><div><p class="nl-title">On Starting Again</p><p class="nl-desc">A letter about beginning new work after a long silence, and what the blank page demands of us when we return to it.</p></div><a href="#" class="nl-read">Read Issue</a></div>
+      <div class="nl-issue"><span class="nl-date">Nov 2023</span><div><p class="nl-title">The Books That Changed Me</p><p class="nl-desc">Eight books I return to year after year, and what each one continues to teach me about the possibilities of the form.</p></div><a href="#" class="nl-read">Read Issue</a></div>
+      <div class="nl-issue"><span class="nl-date">Sep 2023</span><div><p class="nl-title">In Defence of Slowness</p><p class="nl-desc">Why writing fast is sometimes the enemy of writing well, and how I learned to trust the story that arrives on its own schedule.</p></div><a href="#" class="nl-read">Read Issue</a></div>
+      <div class="nl-issue"><span class="nl-date">Jun 2023</span><div><p class="nl-title">What Rejection Taught Me</p><p class="nl-desc">Thirty-seven rejections before my first publication. What those letters contained that I couldn&rsquo;t see at the time.</p></div><a href="#" class="nl-read">Read Issue</a></div>
+    </div>
+  </div>
+</main>
+<script>
+  function handleNL(e){ e.preventDefault(); var b=document.getElementById('nlBtn'); b.textContent='Subscribed — Thank You'; b.disabled=true; }
+</script>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Peter Hace</div>
+        <div class="footer-brand-tag">Spark. Write. Inspire.</div>
+        <p class="footer-brand-desc">A home for literary fiction, original voices, and the writers who dare to tell the truth slant.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="submit.html">Submit Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="stories.html">Stories &amp; Poems</a>
+        <a href="newsletter.html">Newsletter</a>
+        <a href="press.html">Press Kit</a>
+        <a href="sitemap.xml">Sitemap</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Goodreads">Goodreads</a>
+        <a href="#" aria-label="Twitter / X">Twitter / X</a>
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Peter Hace &mdash; Spark. Write. Inspire.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(function(r) {
+        if (!r.ok) throw new Error('nav fetch failed: ' + r.status);
+        return r.text();
+      })
+      .then(function(html) {
+        document.getElementById('nav-placeholder').innerHTML = html;
+        var page = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('#site-nav .nav-links a').forEach(function(a) {
+          if (a.getAttribute('href') === page) a.classList.add('active');
+        });
+      })
+      .catch(function(err) { console.warn('Could not load nav.html:', err); });
+
+    // Fade-in observer
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          setTimeout(function(){ e.target.classList.add('visible'); }, 60);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.fade-in').forEach(function(el){ observer.observe(el); });
+    });
+  </script>
+
+</body>
+</html>

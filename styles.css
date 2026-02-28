@@ -1,0 +1,218 @@
+/* ============================================================
+   SPARK. WRITE. INSPIRE. — Peter Hace
+   Shared stylesheet
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=IM+Fell+English:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --parchment:       #e8edf4;
+  --parchment-dark:  #d4dce9;
+  --parchment-deep:  #b8c6d6;
+  --ink:             #1b2535;
+  --ink-light:       #2e3f56;
+  --sepia:           #4a6b8a;
+  --sepia-light:     #7a9ab8;
+  --gold:            #b56b7e;
+  --gold-light:      #cc8f9e;
+  --cream:           #f0f4f9;
+  --white:           #ffffff;
+  --nav-height:      68px;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', serif;
+  overflow-x: hidden;
+  padding-top: var(--nav-height);
+}
+
+/* Noise texture overlay */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* ── NAV ───────────────────────────────────────────────────── */
+#nav-placeholder {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  height: var(--nav-height);
+}
+
+#site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--nav-height);
+  padding: 0 4rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--parchment-deep);
+  box-shadow: 0 1px 12px rgba(27,37,53,0.07);
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: 'IM Fell English', serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1;
+}
+.nav-brand-tag {
+  font-size: 0.48rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--sepia);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  list-style: none;
+}
+.nav-links a {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.67rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.nav-links a:hover  { color: var(--sepia); }
+.nav-links a:hover::after  { transform: scaleX(1); }
+.nav-links a.active { color: var(--sepia); }
+.nav-links a.active::after { transform: scaleX(1); }
+
+/* Press Kit — bordered CTA button */
+.nav-links a.nav-cta {
+  padding: 0.42rem 1.1rem;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+}
+.nav-links a.nav-cta::after { display: none; }
+.nav-links a.nav-cta:hover  { background: var(--ink); color: var(--white); }
+
+/* ── PAGE HERO ─────────────────────────────────────────────── */
+.page-hero {
+  min-height: 38vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 6rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 20% 80%, rgba(74,107,138,0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+.page-hero-content { display: flex; flex-direction: column; position: relative; z-index: 1; }
+.page-hero-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--sepia-light);
+  margin-bottom: 1rem;
+}
+.page-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--ink);
+}
+.page-hero h1 em { font-style: italic; color: var(--sepia); }
+
+/* ── SHARED UTILITIES ──────────────────────────────────────── */
+.page-content { max-width: 1200px; margin: 0 auto; padding: 5rem 4rem 7rem; }
+
+.section-eyebrow {
+  font-size: 0.68rem; letter-spacing: 0.35em;
+  text-transform: uppercase; color: var(--sepia-light); margin-bottom: 1rem;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem,5vw,3.5rem); font-weight: 300;
+  color: var(--ink); line-height: 1.1;
+}
+.section-title em { font-style: italic; color: var(--sepia); }
+
+/* Fade-in animation */
+.fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── FOOTER ────────────────────────────────────────────────── */
+footer { background: #0e1520; padding: 3rem 4rem; }
+.footer-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 2.5rem; padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(232,237,244,0.08);
+}
+.footer-brand-name { font-family:'IM Fell English',serif; font-size:1.3rem; color:rgba(232,237,244,0.45); margin-bottom:0.3rem; }
+.footer-brand-tag  { font-size:0.5rem; letter-spacing:0.32em; text-transform:uppercase; color:rgba(232,237,244,0.18); }
+.footer-brand-desc { font-size:0.78rem; line-height:1.7; color:rgba(232,237,244,0.22); max-width:240px; margin-top:0.8rem; }
+.footer-nav { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 3rem; }
+.footer-nav a { font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(232,237,244,0.28); text-decoration:none; transition:color 0.3s; }
+.footer-nav a:hover { color:var(--gold-light); }
+.footer-social { display:flex; flex-direction:column; gap:0.5rem; }
+.footer-social a { font-size:0.68rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(232,237,244,0.28); text-decoration:none; transition:color 0.3s; text-align:right; }
+.footer-social a:hover { color:var(--gold-light); }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; }
+.footer-copy { font-size:0.63rem; letter-spacing:0.1em; color:rgba(232,237,244,0.18); }
+.footer-legal { display:flex; gap:2rem; }
+.footer-legal a { font-size:0.63rem; letter-spacing:0.1em; color:rgba(232,237,244,0.18); text-decoration:none; transition:color 0.3s; }
+.footer-legal a:hover { color:rgba(232,237,244,0.4); }
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1050px) {
+  #site-nav { padding: 0 2rem; }
+  .nav-links { gap: 1.6rem; }
+  .nav-links a { font-size: 0.61rem; }
+  .nav-brand-tag { display: none; }
+}
+@media (max-width: 780px) {
+  #site-nav { padding: 0 1.2rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.55rem; letter-spacing: 0.08em; }
+  .nav-links a.nav-cta { padding: 0.35rem 0.7rem; }
+  .page-hero { padding: 5rem 1.5rem 3rem; }
+  .page-content { padding: 3rem 1.5rem 5rem; }
+  .footer-top { flex-direction: column; gap: 2rem; }
+  .footer-social a { text-align: left; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  footer { padding: 2.5rem 1.5rem; }
+}
