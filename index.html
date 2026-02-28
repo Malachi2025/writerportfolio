@@ -43,49 +43,37 @@
   body { background:var(--parchment); color:var(--ink); font-family:'Libre Baskerville',serif; overflow-x:hidden; }
   body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E"); pointer-events:none; z-index:999; opacity:0.6; }
 
-  /* NAV — always dark so it's visible on every page */
+  
+  /* NAV — horizontal, dark, links right-aligned */
   nav {
     position:fixed; top:0; left:0; right:0; z-index:200;
     display:flex; justify-content:space-between; align-items:center;
-    padding:1.1rem 4rem;
+    padding:0 4rem;
+    height:62px;
     background:#0e1520;
     border-bottom:1px solid rgba(232,237,244,0.08);
   }
-  .nav-brand { display:flex; flex-direction:column; gap:0.1rem; text-decoration:none; position:relative; z-index:210; }
-  .nav-brand-name { font-family:'IM Fell English',serif; font-size:1.2rem; letter-spacing:0.04em; color:#e8edf4; line-height:1; }
-  .nav-brand-tag { font-size:0.52rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--sepia-light); }
+  .nav-brand { display:flex; flex-direction:column; gap:0.1rem; text-decoration:none; flex-shrink:0; }
+  .nav-brand-name { font-family:'IM Fell English',serif; font-size:1.15rem; letter-spacing:0.04em; color:#e8edf4; line-height:1; }
+  .nav-brand-tag { font-size:0.5rem; letter-spacing:0.32em; text-transform:uppercase; color:var(--sepia-light); }
+  .nav-links { display:flex; align-items:center; gap:2.2rem; list-style:none; }
+  .nav-links a { font-family:'Libre Baskerville',serif; font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:rgba(232,237,244,0.55); text-decoration:none; transition:color 0.25s; white-space:nowrap; position:relative; padding-bottom:2px; }
+  .nav-links a::after { content:''; position:absolute; bottom:0; left:0; right:0; height:1px; background:var(--gold); transform:scaleX(0); transition:transform 0.25s; }
+  .nav-links a:hover { color:#e8edf4; }
+  .nav-links a:hover::after { transform:scaleX(1); }
+  .nav-links a.active { color:#e8edf4; }
+  .nav-links a.active::after { transform:scaleX(1); }
+  @media(max-width:900px){
+    nav { padding:0 1.5rem; }
+    .nav-links { gap:1.2rem; }
+    .nav-links a { font-size:0.58rem; letter-spacing:0.1em; }
+    .nav-brand-tag { display:none; }
+  }
+  @media(max-width:600px){
+    .nav-links { gap:0.8rem; }
+    .nav-links a { font-size:0.52rem; }
+  }
 
-  /* Hamburger — always light bars since nav is dark */
-  .hamburger { display:flex; flex-direction:column; justify-content:center; gap:5px; width:34px; height:34px; background:none; border:none; cursor:pointer; position:relative; z-index:210; padding:2px; }
-  .hamburger span { display:block; height:1.5px; width:100%; background:#e8edf4; transition:all 0.4s cubic-bezier(0.23,1,0.32,1); transform-origin:center; }
-  .hamburger.open span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
-  .hamburger.open span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
-
-  /* OVERLAY MENU */
-  .menu-overlay { position:fixed; inset:0; z-index:205; background:var(--ink); display:flex; flex-direction:column; justify-content:center; align-items:center; opacity:0; pointer-events:none; transition:opacity 0.5s cubic-bezier(0.23,1,0.32,1); }
-  .menu-overlay::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 30% 50%,rgba(74,107,138,0.15) 0%,transparent 60%),radial-gradient(ellipse at 70% 60%,rgba(181,107,126,0.08) 0%,transparent 50%); pointer-events:none; }
-  .menu-overlay.open { opacity:1; pointer-events:all; }
-  .overlay-brand { font-family:'IM Fell English',serif; font-size:1rem; color:rgba(232,237,244,0.2); letter-spacing:0.1em; position:relative; z-index:1; margin-bottom:2rem; text-align:center; }
-  .overlay-brand span { display:block; font-size:0.52rem; letter-spacing:0.35em; text-transform:uppercase; color:rgba(232,237,244,0.15); margin-top:0.3rem; }
-  .overlay-nav { list-style:none; text-align:center; position:relative; z-index:1; }
-  .overlay-nav li { overflow:hidden; margin-bottom:0.2rem; }
-  .overlay-nav a { display:inline-block; font-family:'Cormorant Garamond',serif; font-size:clamp(2.2rem,5.5vw,4.5rem); font-weight:300; color:rgba(232,237,244,0.85); text-decoration:none; line-height:1.25; transition:color 0.3s,transform 0.4s cubic-bezier(0.23,1,0.32,1); transform:translateY(110%); }
-  .overlay-nav a em { font-style:italic; color:var(--gold-light); }
-  .menu-overlay.open .overlay-nav a { transform:translateY(0); }
-  .overlay-nav li:nth-child(1) a { transition-delay:0.04s; }
-  .overlay-nav li:nth-child(2) a { transition-delay:0.08s; }
-  .overlay-nav li:nth-child(3) a { transition-delay:0.12s; }
-  .overlay-nav li:nth-child(4) a { transition-delay:0.16s; }
-  .overlay-nav li:nth-child(5) a { transition-delay:0.20s; }
-  .overlay-nav li:nth-child(6) a { transition-delay:0.24s; }
-  .overlay-nav a:hover { color:var(--gold-light); transform:translateY(0) translateX(8px); }
-  .overlay-rule { width:60px; height:1px; background:rgba(204,143,158,0.4); margin:1.5rem auto; position:relative; z-index:1; opacity:0; transition:opacity 0.5s 0.28s; }
-  .menu-overlay.open .overlay-rule { opacity:1; }
-  .overlay-footer { position:absolute; bottom:2.5rem; left:0; right:0; display:flex; justify-content:center; gap:3rem; z-index:1; opacity:0; transform:translateY(10px); transition:opacity 0.5s 0.32s,transform 0.5s 0.32s; }
-  .menu-overlay.open .overlay-footer { opacity:1; transform:translateY(0); }
-  .overlay-footer a { font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(232,237,244,0.3); text-decoration:none; transition:color 0.3s; }
-  .overlay-footer a:hover { color:var(--gold-light); }
 
   /* PAGE HERO */
   .page-hero { min-height:38vh; display:flex; align-items:flex-end; padding:8rem 4rem 4rem; position:relative; overflow:hidden; }
@@ -203,26 +191,22 @@
 </head>
 <body>
 
+
 <nav>
   <a href="index.html" class="nav-brand" aria-label="Spark. Write. Inspire. — Home">
     <span class="nav-brand-name">Peter Hace</span>
     <span class="nav-brand-tag">Spark. Write. Inspire.</span>
   </a>
-  <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="menuOverlay">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="menu-overlay" id="menuOverlay" role="dialog" aria-label="Navigation menu">
-  <div class="overlay-brand">Peter Hace<span>Spark. Write. Inspire.</span></div>
-  <ul class="overlay-nav">
-    <li><a href="about.html" class="menu-link">About</a></li>
-    <li><a href="stories.html" class="menu-link">Stories <em>&amp; Poems</em></a></li>
-    <li><a href="submit.html" class="menu-link">Submit <em>Work</em></a></li>
-    <li><a href="contact.html" class="menu-link">Contact</a></li>
-    <li><a href="newsletter.html" class="menu-link">Newsletter</a></li>
-    <li><a href="press.html" class="menu-link">Press <em>Kit</em></a></li>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="stories.html">Stories &amp; Poems</a></li>
+    <li><a href="submit.html">Submit Work</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="newsletter.html">Newsletter</a></li>
+    <li><a href="press.html">Press Kit</a></li>
   </ul>
-  <div class="overlay-rule"></div>
+</nav>
+
   <div class="overlay-footer">
     <a href="#" aria-label="Instagram">Instagram</a>
     <a href="#" aria-label="Goodreads">Goodreads</a>
@@ -336,7 +320,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 Peter Hace &mdash; Spark. Write. Inspire. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2024 Peter Hace &mdash; Spark. Write. Inspire. All rights reserved.</p>
     <div class="footer-legal">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms of Use</a>
@@ -346,40 +330,15 @@
 </footer>
 
 
+
 <script>
-  const hamburger = document.getElementById('hamburger');
-  const menuOverlay = document.getElementById('menuOverlay');
-  let menuOpen = false;
-  hamburger.addEventListener('click', () => {
-    menuOpen = !menuOpen;
-    hamburger.classList.toggle('open', menuOpen);
-    menuOverlay.classList.toggle('open', menuOpen);
-    hamburger.setAttribute('aria-expanded', menuOpen);
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  // Highlight active nav link
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    if(a.getAttribute('href') === path) a.classList.add('active');
   });
-  document.querySelectorAll('.menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menuOpen = false;
-      hamburger.classList.remove('open');
-      menuOverlay.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && menuOpen) {
-      menuOpen = false;
-      hamburger.classList.remove('open');
-      menuOverlay.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    }
-  });
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('visible'),80); observer.unobserve(e.target); } });
-  }, {threshold:0.08});
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+
 
 </body>
 </html>
